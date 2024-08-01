@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://vh88p3w13pu7"]
+
+[ext_resource type="Texture2D" uid="uid://b8hwclg8lq4mx" path="res://bichito.png" id="1_snsfv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1qc1b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uk21f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_snsfv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1qc1b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
+position = Vector2(-2.38419e-07, -0.5)
+scale = Vector2(0.0608365, 0.0994764)
+sprite_frames = SubResource("SpriteFrames_uk21f")

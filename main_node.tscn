@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7rtqolro77fj"]
+
+[ext_resource type="PackedScene" uid="uid://ch5fdi5um3r31" path="res://gotti_Chikito.tscn" id="1_hw2gp"]
+[ext_resource type="Script" path="res://World.gd" id="1_wpid6"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_wpid6")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_hw2gp")]
+position = Vector2(0, -1)
